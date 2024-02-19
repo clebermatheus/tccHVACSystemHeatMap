@@ -1,0 +1,12 @@
+[Unit]
+Description=TCC Receive Script Service
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=on-failure
+ExecStart=/usr/bin/python3 /var/scripts/tccReceive.py
+
+[Install]
+WantedBy=multi-user.target
+

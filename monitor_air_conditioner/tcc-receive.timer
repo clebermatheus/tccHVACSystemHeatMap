@@ -1,0 +1,11 @@
+[Unit]
+Description=VivaCare Timer
+Requires=tcc-receive.service
+
+[Timer]
+Unit=tcc-receive.service
+OnBootSec=1min
+OnUnitActiveSec=10min
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=TCC Scripts Service
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=on-failure
+ExecStart=/usr/bin/python /home/clebermatheus/tcc/monitor_air_conditioner/sendDatas.py
+
+[Install]
+WantedBy=multi-user.target
